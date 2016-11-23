@@ -1,0 +1,20 @@
+module.exports={
+    entry:"./public/counterApp.js",
+    output:{
+        path:__dirname+'/public',
+        filename:'bundle.js'
+    },
+    module:{
+        loaders:[
+            {
+                exclude:/(node_module)/,
+                loader:'babel-loader',
+                query:{
+                    presets:['es2015','react']//历经各种问题，总之babel版本变化特别快，要根据babel官网的来
+                }
+            }
+        ]
+    },
+    watch:true,//保证每次保存时会自动打包
+
+}
