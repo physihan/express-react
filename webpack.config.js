@@ -1,5 +1,5 @@
 module.exports={
-    entry:"./public/counterApp.js",
+    entry:"./public/app.js",
     output:{
         path:__dirname+'/public',
         filename:'bundle.js'
